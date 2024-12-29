@@ -38,10 +38,11 @@ services:
             - 8080:80
         environment:
             PMA_HOST: mariadb
+            UPLOAD_LIMIT: 300M
         depends_on:
             - mariadb
 
 # Volumes
 volumes:
 
-  mysqldata:
+    mysqldata:
